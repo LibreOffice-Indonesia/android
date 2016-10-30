@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "321228395752",
+    "firebase_url": "https://libreoffice-id-development.firebaseio.com",
+    "project_id": "libreoffice-id-development",
+    "storage_bucket": "libreoffice-id-development.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:321228395752:android:916150dc82944efd",
+        "android_client_info": {
+          "package_name": "com.libreoffice.id"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "321228395752-osq8gfpnfoch37vge1uhm5t89q3k2mdp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.libreoffice.id",
+            "certificate_hash": "3388C4DD2ADD3033B8CCC40562635138C5DF02E2"
+          }
+        },
+        {
+          "client_id": "321228395752-3i9e04bk74dtgc0rao7gdj5lh9shub15.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.libreoffice.id",
+            "certificate_hash": "01787138E585E81877543E55B300056043853971"
+          }
+        },
+        {
+          "client_id": "321228395752-rq8etol5hle87t82kdhq4smkfgqio98i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBv4owMDY2QjputGcWt0NSbmKSMEJ1HxM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "321228395752-rq8etol5hle87t82kdhq4smkfgqio98i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

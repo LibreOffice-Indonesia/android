@@ -1,0 +1,91 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        //noinspection GradleDynamicVersion
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+}
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+apply plugin: 'android-apt'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.0"
+    defaultConfig {
+        applicationId "com.libreoffice.id"
+        minSdkVersion 10
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        release {
+//            minifyEnabled false
+//            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+        production {
+            resValue 'string', 'app_name', 'Lebih Dekat Dengan LibreOffice'
+            versionName "1.0"
+        }
+        beta {
+            resValue 'string', 'app_name', 'LibreOfficeID Beta'
+            versionName "1.0-dev"
+        }
+    }
+}
+
+ext {
+    supportLibraryVersion = '24.2.1'
+    butterKnifeVersion = '8.4.0'
+    stethoDebuggingVersion = '1.4.1'
+    firebaseVersion = '9.8.0'
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testCompile 'junit:junit:4.12'
+
+    compile "com.android.support:appcompat-v7:$supportLibraryVersion"
+    compile "com.android.support:design:$supportLibraryVersion"
+    compile "com.android.support:recyclerview-v7:$supportLibraryVersion"
+    compile "com.android.support:support-v4:$supportLibraryVersion"
+    compile "com.android.support:support-annotations:$supportLibraryVersion"
+
+    compile "com.google.firebase:firebase-core:$firebaseVersion"
+    compile "com.google.firebase:firebase-auth:$firebaseVersion"
+    compile "com.google.firebase:firebase-database:$firebaseVersion"
+    compile "com.google.firebase:firebase-storage:$firebaseVersion"
+    compile "com.google.firebase:firebase-messaging:$firebaseVersion"
+    compile "com.google.firebase:firebase-config:$firebaseVersion"
+    compile "com.google.firebase:firebase-invites:$firebaseVersion"
+
+    compile "com.jakewharton:butterknife:$butterKnifeVersion"
+    apt "com.jakewharton:butterknife-compiler:$butterKnifeVersion"
+
+    compile "com.facebook.stetho:stetho:$stethoDebuggingVersion"
+    compile "com.facebook.stetho:stetho-okhttp3:$stethoDebuggingVersion"
+    compile "com.facebook.stetho:stetho-urlconnection:$stethoDebuggingVersion"
+
+    compile('com.crashlytics.sdk.android:crashlytics:2.6.5@aar') {
+        transitive = true;
+    }
+}
+
+apply plugin: 'com.google.gms.google-services'
