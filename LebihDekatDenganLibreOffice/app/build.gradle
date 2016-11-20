@@ -18,7 +18,13 @@ android {
             minifyEnabled true
             shrinkResources true
             debuggable false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            useProguard true
+            proguardFiles 'proguard-rules.pro'
+        }
+        debug {
+            debuggable true
+            minifyEnabled false
+            shrinkResources false
         }
     }
     productFlavors {
@@ -49,7 +55,7 @@ repositories {
 }
 
 ext {
-    supportLibraryVersion = '24.2.1'
+    supportLibraryVersion = '25.0.1'
     butterKnifeVersion = '8.4.0'
     stethoDebuggingVersion = '1.4.1'
     firebaseVersion = '9.8.0'
@@ -57,6 +63,7 @@ ext {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
@@ -86,8 +93,6 @@ dependencies {
         transitive = true;
     }
     compile 'org.greenrobot:eventbus:3.0.0'
-    compile 'com.android.support:support-v4:25.0.0'
-    testCompile 'junit:junit:4.12'
 }
 
 apply plugin: 'com.google.gms.google-services'

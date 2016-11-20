@@ -15,3 +15,13 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+
+-basedirectory proguard/
+
+-include proguard-android-optimize.pro
+
+-include butterknife.pro
+-include crashlytics.pro
+-include eventbus.pro
+-include firebase.pro
+-include others.pro
