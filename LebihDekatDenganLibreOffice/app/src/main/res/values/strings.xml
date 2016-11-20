@@ -1,3 +1,10 @@
 <resources>
+    <!--Menu-->
+    <string name="about">Tentang</string>
+    <string name="bookmark">Bookmark</string>
+    <string name="search">Cari</string>
+    <string name="more">Lagi</string>
 
+    <!--Home-->
+    <string name="home">Beranda</string>
 </resources>

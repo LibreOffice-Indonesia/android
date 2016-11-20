@@ -1,4 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <item
+        android:id="@+id/menu_search"
+        android:icon="@drawable/icon_search"
+        android:title="@string/search"
+        app:showAsAction="always"
+        tools:ignore="AlwaysShowAction" />
+
+    <item
+        android:id="@+id/bookmark"
+        android:icon="@drawable/icon_bookmark"
+        android:title="@string/bookmark"
+        app:showAsAction="always" />
+
+
+    <item
+        android:id="@+id/menu_more"
+        android:icon="@drawable/icon_more"
+        android:title="@string/more"
+        app:showAsAction="always">
+        <menu>
+            <item
+                android:id="@+id/menu_about"
+                android:title="@string/about" />
+        </menu>
+    </item>
 
 </menu>

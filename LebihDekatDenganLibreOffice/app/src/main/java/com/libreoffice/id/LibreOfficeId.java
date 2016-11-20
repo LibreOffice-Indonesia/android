@@ -28,7 +28,7 @@ public class LibreOfficeId extends Application{
         }
 
 //        Enable hanya untuk versi aplikasi RELEASE
-        if (!BuildConfig.DEBUG || BuildConfig.FLAVOR.equalsIgnoreCase("beta")){
+        if (!BuildConfig.DEBUG || (BuildConfig.FLAVOR.equalsIgnoreCase("beta") && !BuildConfig.DEBUG)){
             Fabric.with(this, new Crashlytics());
         }
     }
