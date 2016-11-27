@@ -4,8 +4,14 @@
     <color name="colorPrimaryDark">#1976D2</color>
     <color name="colorPrimaryLight">#BBDEFB</color>
     <color name="colorAccent">#03A9F4</color>
-    <color name="primary_text">#212121</color>
+    <color name="primary_text">#FFFFFF</color>
     <color name="secondary_text">#757575</color>
     <color name="icons">#FFFFFF</color>
     <color name="divider">#BDBDBD</color>
+
+    <!--Blue Grey-->
+    <color name="blue_grey_500">#607D8B</color>
+    <color name="blue_grey_50">#ECEFF1</color>
+    <color name="blue_grey_100">#CFD8DC</color>
+
 </resources>

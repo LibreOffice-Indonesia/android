@@ -7,4 +7,10 @@
 
     <!--Home-->
     <string name="home">Beranda</string>
+    <string name="home_documents">Documents</string>
+    <string name="home_bookmarks">Bookmarks</string>
+    <string name="home_bab">BAB</string>
+    <string name="home_hal">HAL</string>
+    <string name="home_title">JUDUL</string>
+
 </resources>
